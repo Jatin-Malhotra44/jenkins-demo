@@ -6,7 +6,7 @@
   tasks:
   - name: Place custom HTML file
     copy:
-      src: /var/lib/jenkins/workspace/ithub-pipeline/portfolio2.html
+      src: /var/lib/jenkins/workspace/github-pipeline/portfolio2.html
       dest: /var/www/html/portfolio2.html
     become: true
 
