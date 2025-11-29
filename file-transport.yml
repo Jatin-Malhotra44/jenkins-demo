@@ -1,0 +1,18 @@
+- name: Upload new code and Restart the server
+  hosts: 192.168.1.107
+  vars:
+  - app: httpd
+
+  tasks:
+  - name: Place custom HTML file
+    copy:
+      src: /var/lib/jenkins/workspace/ithub-pipeline/portfolio2.html
+      dest: /var/www/html/portfolio2.html
+    become: true
+
+  - name: Start the service
+    service:
+      name: httpd
+      state: restarted
+      enabled: yes
+    become: true
