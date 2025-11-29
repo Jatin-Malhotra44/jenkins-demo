@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Jatin Malhotra — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa4b2; --accent:#5eead4; --glass: rgba(255,255,255,0.04);
+      --max-width:1100px; font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,var(--bg),#071023);color:#e6eef6;line-height:1.5}
+    .wrap{max-width:var(--max-width);margin:40px auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;color:#042; font-weight:700}
+    nav a{color:var(--muted);text-decoration:none;margin-left:18px;font-weight:600}
+    .hero{display:flex;gap:28px;align-items:center;margin-top:28px}
+    .intro{flex:1}
+    h1{margin:0;font-size:clamp(24px,4vw,36px)}
+    p.lead{color:var(--muted);margin-top:10px}
+    .cta{display:inline-block;margin-top:16px;padding:10px 14px;border-radius:8px;background:var(--accent);color:#012; font-weight:700;text-decoration:none}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    .meta{color:var(--muted);font-size:13px;margin-top:8px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;color:var(--muted)}
+
+    /* Projects */
+    .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin-top:22px}
+    .proj{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));}
+    .proj h3{margin:0;font-size:16px}
+    .proj p{margin:8px 0;color:var(--muted);font-size:14px}
+    .tags{display:flex;gap:8px;flex-wrap:wrap}
+    .tag{font-size:12px;padding:6px;border-radius:6px;background:rgba(255,255,255,0.03);color:var(--muted)}
+
+    /* Contact */
+    footer{margin-top:40px;display:grid;grid-template-columns:1fr 320px;gap:18px}
+    .contact form{display:flex;flex-direction:column;gap:8px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit}
+    button{background:var(--accent);border:none;padding:10px;border-radius:8px;font-weight:700;color:#012}
+
+    /* Responsive */
+    @media (max-width:800px){
+      .hero{flex-direction:column;align-items:flex-start}
+      footer{grid-template-columns:1fr}
+      nav{display:none}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">JM</div>
+        <div>
+          <div style="font-weight:700">Jatin Malhotra</div>
+          <div style="font-size:12px;color:var(--muted)">Cloud Analyst & Platform Engineer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="intro">
+        <h1>Cloud-focused engineer building reliable infrastructure and delivery pipelines.</h1>
+        <p class="lead">I design automated, secure, and observable cloud environments and build reproducible delivery pipelines to ship software reliably.</p>
+        <a class="cta" href="#contact">Get in touch</a>
+
+        <div style="margin-top:18px" class="card">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-weight:700">Current</div>
+              <div class="meta">Cloud Analyst — Deloitte</div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-weight:700">3+ yrs</div>
+              <div class="meta">Cloud, IaC, CI/CD</div>
+            </div>
+          </div>
+
+          <div class="skills" id="skills">
+            <span class="skill">Infrastructure as Code</span>
+            <span class="skill">Multi-account Security</span>
+            <span class="skill">CI/CD & Pipelines</span>
+            <span class="skill">Containerization</span>
+            <span class="skill">Observability</span>
+            <span class="skill">Scripting & Automation</span>
+          </div>
+        </div>
+      </div>
+
+      <aside style="width:320px">
+        <div class="card">
+          <h3>Profile</h3>
+          <p class="meta">Cloud infrastructure specialist focused on automation, security controls, and reliable delivery.</p>
+          <div style="margin-top:12px">
+            <div style="font-weight:600">Email</div>
+            <div class="meta">jatin@example.com</div>
+            <div style="font-weight:600;margin-top:8px">Location</div>
+            <div class="meta">Bengaluru, India</div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects">
+      <h2 style="margin-top:28px">Projects</h2>
+      <div class="projects-grid">
+        <article class="proj card">
+          <h3>CI/CD Platform</h3>
+          <p>Designed a pipeline to build, test and deploy microservices with automated rollbacks and health checks.</p>
+          <div class="tags"><span class="tag">CI/CD</span><span class="tag">Automation</span><span class="tag">Pipelines</span></div>
+        </article>
+
+        <article class="proj card">
+          <h3>Multi-account Security</h3>
+          <p>Implemented centralized security findings aggregation and account-level guardrails across environments.</p>
+          <div class="tags"><span class="tag">Security</span><span class="tag">Governance</span></div>
+        </article>
+
+        <article class="proj card">
+          <h3>Container Platform</h3>
+          <p>Deployed microservices with autoscaling and managed container lifecycle and observability agents.</p>
+          <div class="tags"><span class="tag">Containers</span><span class="tag">Kubernetes</span></div>
+        </article>
+
+      </div>
+    </section>
+
+    <footer id="contact">
+      <div>
+        <div style="font-size:18px;font-weight:700">Let's build something useful</div>
+        <p class="meta">I'm available for platform, infrastructure automation and SRE work. Open to contract or full-time roles.</p>
+        <div style="margin-top:12px">
+          <a href="#" class="skill">Download Résumé</a>
+        </div>
+      </div>
+
+      <div class="card contact">
+        <form action="mailto:jatin@example.com" method="post" enctype="text/plain">
+          <label style="font-size:13px">Name</label>
+          <input type="text" name="name" required>
+          <label style="font-size:13px">Email</label>
+          <input type="email" name="email" required>
+          <label style="font-size:13px">Message</label>
+          <textarea name="message" rows="5" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+    </footer>
+
+    <div style="text-align:center;color:var(--muted);font-size:13px;margin-top:26px">© 2025 Jatin Malhotra — Built with a focus on clarity and production-readiness</div>
+  </div>
+
+  <script>
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',function(e){
+      e.preventDefault(); const t=document.querySelector(this.getAttribute('href'));
+      if(t) t.scrollIntoView({behavior:'smooth',block:'start'});
+    }));
+  </script>
+</body>
+</html>
